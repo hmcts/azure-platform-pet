@@ -37,7 +37,7 @@ variables:
     value: ss
   # same comment as above ^^
   - name: serviceConnection
-    value: DTS-SHAREDSERVICES-${{ parameters.env }}
+    value: DTS-PETAPPS-${{ parameters.env }}
 
 stages:
 
