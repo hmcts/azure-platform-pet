@@ -34,3 +34,10 @@ variable "environment" {
 variable "control_vault" {
   type = string
 }
+variable "tags" {
+  description = "The tags to associate with your resources."
+  type        = map(string)
+  default = {
+    Team = "PetApps-DevOps"
+  }
+}
