@@ -20,4 +20,5 @@ module "landing_zone" {
   oms_env                    = var.oms_env
   certificate_name_check     = true
   key_vault_resource_group   = azurerm_resource_group.fd_rg.name 
+  depends_on = [azurerm_log_analytics_workspace.diag]
 }
