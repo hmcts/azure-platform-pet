@@ -19,12 +19,6 @@ parameters:
     type: string
     default: 'DEMO'
     values:
-    - ITHC
-    - DEV
-    - DEMO
-    - SBOX
-    - TEST
-    - STG
     - PROD
           
 name: HMCTS Shared Services AKS Azure Infrastructure Deployment Pipeline
@@ -60,4 +54,3 @@ stages:
               stack: 'frontdoor'
               project: $(project)
               tfversion: $(tfversion)
-
