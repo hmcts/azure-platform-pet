@@ -16,8 +16,8 @@ module "landing_zone" {
   ssl_mode                   = "AzureKeyVault" 
   resource_group             = azurerm_resource_group.fd_rg.name
   subscription_id            = data.azurerm_subscription.current.subscription_id
-  certificate_key_vault_name = var.certificate_key_vault_name
+  certificate_key_vault_name = azurerm_key_vault.key_vault.name 
   oms_env                    = var.oms_env
   certificate_name_check     = true
-  key_vault_resource_group   = var.key_vault_resource_group
+  key_vault_resource_group   = azurerm_resource_group.fd_rg.name 
 }
