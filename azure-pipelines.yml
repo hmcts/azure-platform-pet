@@ -17,7 +17,7 @@ parameters:
   - name: env
     displayName: Environment
     type: string
-    default: 'DEMO'
+    default: 'PROD'
     values:
     - PROD
           
