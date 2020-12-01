@@ -20,5 +20,5 @@ module "landing_zone" {
   oms_env                    = var.oms_env
   certificate_name_check     = true
   key_vault_resource_group   = azurerm_resource_group.fd_rg.name 
-  log_analytics_workspace_id = azurerm_log_analytics_workspace.diag.id
+  log_analytics_workspace_id = "/subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourcegroups/oms-automation/providers/microsoft.operationalinsights/workspaces/hmcts-prod" 
 }
