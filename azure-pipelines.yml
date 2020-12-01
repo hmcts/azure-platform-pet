@@ -37,7 +37,11 @@ variables:
     value: pet
   # same comment as above ^^
   - name: serviceConnection
+<<<<<<< HEAD
     value: OPS-APPROVAL-GATE-${{ parameters.env }}-ENVS
+=======
+    value: OPS-APPROVAL-GATE-${{ parameters.env }}-ENVS}
+>>>>>>> 1fdee99a6c85f77de36559a28e0361ee5174e2c3
 
 stages:
 
