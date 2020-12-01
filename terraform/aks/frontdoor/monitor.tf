@@ -1,12 +1,12 @@
 
 resource "azurerm_resource_group" "dia_rg" {
-  name     = "ss-${var.env}-monitoring-rg" 
+  name     = "petapps-${var.env}-monitoring-rg" 
   location = var.location
   tags     = local.common_tags
 }
 
 resource "azurerm_log_analytics_workspace" "diag" {
-  name                = "ss-${var.env}-law" 
+  name                = "petapps-${var.env}-law" 
   location            = azurerm_resource_group.dia_rg.location
   resource_group_name = azurerm_resource_group.dia_rg.name
   sku                 = "Standard"
