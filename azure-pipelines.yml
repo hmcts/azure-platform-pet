@@ -37,7 +37,7 @@ variables:
     value: pet
   # same comment as above ^^
   - name: serviceConnection
-    value: DTS-PETAPPS-${{ parameters.env }}
+    value: OPS-APPROVAL-GATE-${{ parameters.env }}-ENVS
 
 stages:
 
