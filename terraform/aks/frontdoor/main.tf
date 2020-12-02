@@ -13,7 +13,6 @@ module "landing_zone" {
 
   providers = {
     azurerm      = azurerm
-    azurerm.data = azurerm.data
   }
 
   common_tags                = local.common_tags
