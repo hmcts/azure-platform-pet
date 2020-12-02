@@ -1,47 +1,45 @@
 variable "env" {
   description = "Enter name of the environment to deploy frontdoor"
-  type = string
+  type        = string
 }
 variable "subscription" {
   description = "Name of the subscription to deploy frontdoor, e.g. stg"
-  type = string
+  type        = string
 }
 variable "project" {
   description = "Name of the project"
-  type = string
+  type        = string
 }
 variable "location" {
   description = "Azure location to deploy the resource"
-  type = string
+  type        = string
 }
 variable "frontends" {
   description = "Variable holds frontdoor configuration"
-  type = any
+  type        = any
 }
 variable "subscription_id" {
-description = "Enter Subscription ID"
-  type = string
+  description = "Enter Subscription ID"
+  type        = string
 }
 
 variable "certificate_key_vault_name" {
-description = "Name of the Keyvault that holds certificate"
-  type = string
+  description = "Name of the Keyvault that holds certificate"
+  type        = string
 }
 variable "oms_env" {
-description = "Name of the log analytics workspace"
-  type = string
+  description = "Name of the log analytics workspace"
+  type        = string
 }
 variable "data_subscription" {
-  type = string
+  description = "Enter data Subscription ID"
+  type        = string
 
 }
 
-variable "environment" {
-  type = string
-}
 variable "control_vault" {
   description = "The tags to associate with your resources."
-  type = string
+  type        = string
 }
 variable "tags" {
   description = "The tags to associate with your resources."
