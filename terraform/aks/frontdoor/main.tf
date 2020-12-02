@@ -13,6 +13,7 @@ module "landing_zone" {
 
   providers = {
     azurerm      = azurerm
+    azurerm.data = azurerm.data
   }
 
   common_tags                = local.common_tags
@@ -30,5 +31,5 @@ module "landing_zone" {
   certificate_name_check     = true
   key_vault_resource_group   = azurerm_resource_group.fd_rg.name
   log_analytics_workspace_id = "/subscriptions/8999dec3-0104-4a27-94ee-6588559729d1/resourcegroups/oms-automation/providers/microsoft.operationalinsights/workspaces/hmcts-prod"
- # depends_on                 = [azurerm_key_vault.key_vault]
+  depends_on                 = [azurerm_key_vault.key_vault]
 }
