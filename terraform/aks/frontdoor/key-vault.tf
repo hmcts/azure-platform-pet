@@ -4,8 +4,8 @@
 
 
 resource "azurerm_key_vault" "key_vault" {
-  name                = var.certificate_key_vault_name 
-  resource_group_name = azurerm_resource_group.fd_rg.name  
+  name                = var.certificate_key_vault_name
+  resource_group_name = azurerm_resource_group.fd_rg.name
   location            = var.location
 
   sku_name = "standard"
