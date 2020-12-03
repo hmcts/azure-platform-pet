@@ -1,9 +1,10 @@
-data "azurerm_subscription" "log" {
-  subscription_id = "8999dec3-0104-4a27-94ee-6588559729d1"
-} 
+data "azurerm_client_config" "current" {
+  provider = azurerm.loganalytics
+}
 
 resource "azurerm_role_assignment" "role" {
-  scope                =  data.azurerm_subscription.log.id 
+  provider             = azurerm.loganalytics
+  scope                = data.azurerm_client_config.current.id
   role_definition_name = "Log Analytics Contributor"
   principal_id         = data.azuread_group.operations_group.object_id
 
