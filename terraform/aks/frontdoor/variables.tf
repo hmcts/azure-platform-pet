@@ -1,42 +1,50 @@
 variable "env" {
-  type = string
+  description = "Enter name of the environment to deploy frontdoor"
+  type        = string
 }
 variable "subscription" {
-  type = string
+  description = "Name of the subscription to deploy frontdoor, e.g. stg"
+  type        = string
 }
 variable "project" {
-  type = string
+  description = "Name of the project"
+  type        = string
 }
 variable "location" {
-  type = string
+  description = "Azure location to deploy the resource"
+  type        = string
 }
 variable "frontends" {
-  type = any
+  description = "Variable holds frontdoor configuration"
+  type        = any
 }
 variable "subscription_id" {
-  type = string
+  description = "Enter Subscription ID"
+  type        = string
 }
 
 variable "certificate_key_vault_name" {
-  type = string
+  description = "Name of the Keyvault that holds certificate"
+  type        = string
 }
 variable "oms_env" {
-  type = string
-}
-variable "key_vault_resource_group" {
-  type = string
+  description = "Name of the log analytics workspace"
+  type        = string
 }
 variable "data_subscription" {
-  type = string
+  description = "Enter data Subscription ID"
+  type        = string
 
 }
 
-variable "environment" {
-  type = string
-}
 variable "control_vault" {
-  type = string
+  description = "The tags to associate with your resources."
+  type        = string
 }
-variable "activity_name" {
-  type = string
+variable "tags" {
+  description = "The tags to associate with your resources."
+  type        = map(string)
+  default = {
+    Team = "PetApps-DevOps"
+  }
 }
