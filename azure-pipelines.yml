@@ -38,6 +38,8 @@ variables:
   # same comment as above ^^
   - name: serviceConnection
     value: OPS-APPROVAL-GATE-${{ parameters.env }}-ENVS
+  - name: TF_LOG
+    value: TRACE 
 
 stages:
 
