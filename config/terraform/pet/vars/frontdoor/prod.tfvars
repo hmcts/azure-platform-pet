@@ -1,4 +1,4 @@
-project                    = "pet3-hmcts"
+project                    = "pet2-hmcts"
 location                   = "uksouth"
 env                        = "prod"
 subscription               = "prod"
