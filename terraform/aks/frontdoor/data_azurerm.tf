@@ -4,7 +4,7 @@ data "azuread_group" "operations_group" {
   name = "DTS Operations (env:${var.env})"
 }
 data "azurerm_log_analytics_workspace" "log" {
-  provider = azurerm.loganalytics
+  provider            = azurerm.loganalytics
   name                = "hmcts-prod"
   resource_group_name = "oms-automation"
 
